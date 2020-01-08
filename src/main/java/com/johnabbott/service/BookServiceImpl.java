@@ -9,22 +9,38 @@ import com.johnabbott.model.Book;
 
 @Service
 public class BookServiceImpl implements BookService{
+	
+	List<Book> listBooks;
+	
 	public List<Book> getComputerBooks(){
-		List<Book> computerbooks = new ArrayList<Book>();
+		listBooks = new ArrayList<Book>();
 		
-		computerbooks.add(new Book("computerbook1", "author1", 1995));
-		computerbooks.add(new Book("computerbook2", "author2", 2000));
+		listBooks.add(new Book(1, "computerbook1", "author1", 1995));
+		listBooks.add(new Book(2, "computerbook2", "author2", 2000));
 		
-		return computerbooks;
+		return listBooks;
 	}
 	
 	public List<Book> getNovelBooks(){
-		List<Book> novelbooks = new ArrayList<Book>();
+		listBooks = new ArrayList<Book>();
 		
-		novelbooks.add(new Book("novelbook1", "author3", 2015));
-		novelbooks.add(new Book("novelbook2", "author4", 1998));
+		listBooks.add(new Book(3, "novelbook1", "author3", 2015));
+		listBooks.add(new Book(4, "novelbook2", "author4", 1998));
 		
-		return novelbooks;
+		return listBooks;
 	}
+	
+	public List<Book> getBooks(){
+		return listBooks;
+	}
+	
+	@Override
+	public boolean addBook(Book bk) {
+		bk.setId(listBooks.size() + 1);
+		listBooks.add(bk);
+		return true;
+	}
+	
+	
 
 }

@@ -9,5 +9,7 @@ public interface BookService {
 	public List<Book> getNovelBooks();
 	
 	public List<Book> getComputerBooks();
+	
+	public boolean addBook(Book bk);
 
 }

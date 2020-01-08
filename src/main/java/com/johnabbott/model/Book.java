@@ -2,44 +2,56 @@ package com.johnabbott.model;
 
 public class Book {
 	
-	private String BookName;
-	private String Author;
-	private int Year;
+	private int id;
+	private String bookName;
+	private String author;
+	private int year;
 	
 	public Book() {
 		
 	}
 
-	public Book(String bookName, String author, int year) {
+	public Book(int id, String bookName, String author, int year) {
 		super();
-		BookName = bookName;
-		Author = author;
-		Year = year;
+		this.id = id;
+		this.bookName = bookName;
+		this.author = author;
+		this.year = year;
 	}
 
 	public String getBookName() {
-		return BookName;
+		return bookName;
 	}
 
 	public void setBookName(String bookName) {
-		BookName = bookName;
+		this.bookName = bookName;
 	}
 
 	public String getAuthor() {
-		return Author;
+		return author;
 	}
 
 	public void setAuthor(String author) {
-		Author = author;
+		this.author = author;
 	}
 
 	public int getYear() {
-		return Year;
+		return year;
 	}
 
 	public void setYear(int year) {
-		Year = year;
+		this.year = year;
 	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+
 	
 	
 
