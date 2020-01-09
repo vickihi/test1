@@ -23,6 +23,8 @@
 					<td><c:out value="${computerbook.bookName}"></c:out></td>
 					<td><c:out value="${computerbook.author}"></c:out></td>
 					<td><c:out value="${computerbook.year}"></c:out></td>
+					<td><a href="updatebook?bookId=${computerbook.id}">update me</a></td>
+					<td><a href="deletebook?bookId=${computerbook.id}">delete me</a></td>
 				</tr>
 			</c:forEach>
 
