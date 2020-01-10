@@ -6,10 +6,14 @@ import com.johnabbott.model.Book;
 
 public interface BookService {
 	
-	public List<Book> getNovelBooks();
+	public boolean addBook(Book book); //Create
 	
-	public List<Book> getComputerBooks();
+	public List<Book> getBooks(); //Read
 	
-	public boolean addBook(Book bk);
+	public Book getBookById(int bookId); //Read
+	
+	public boolean deleteBook(int bookId); //Delete
+	
+	public boolean updateBook(Book book); //Update
 
 }

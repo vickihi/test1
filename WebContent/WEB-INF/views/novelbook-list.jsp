@@ -25,8 +25,8 @@
 					<td><c:out value="${novelbook.bookName}"></c:out></td>
 					<td><c:out value="${novelbook.author}"></c:out></td>
 					<td><c:out value="${novelbook.year}"></c:out></td>
-					<td><a href="updatebook?bookId=${novelbook.id}">update me</a></td>
-					<td><a href="deletebook?bookId=${novelbook.id}">delete me</a></td>
+					<td><a href="editbook?bookId=${novelbook.id}">update me!</a></td>
+					<td><a href="deletebook?bookId=${novelbook.id}">delete me!</a></td>
 				</tr>
 			</c:forEach>
 		</table>

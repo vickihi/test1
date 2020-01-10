@@ -23,7 +23,7 @@ public class ComputerBKController {
 	public ModelAndView getComputerBookList() {
 		ModelAndView modelView = new ModelAndView("computerbook-list");
 
-		List<Book> computerbooks = service.getComputerBooks();
+		List<Book> computerbooks = service.getBooks();
 		modelView.addObject("computerbookList", computerbooks);
 		modelView.addObject("book", new Book());
 		//modelView.addObject("book", new Book(3,"A", "B", 2000));
